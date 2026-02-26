@@ -2,25 +2,25 @@
 services:
   postgres:
     image: postgres:17
-    container_name: node_prisma_oop
+    container_name: swe_deep
     restart: unless-stopped
     environment:
       POSTGRES_USER: aiarnob23
       POSTGRES_PASSWORD: aiarnob23
-      POSTGRES_DB: node_prisma_oop
+      POSTGRES_DB: swe_deep
     ports:
-      - "6666:5432" 
+      - "6668:5432" 
     volumes:
-      - node_prisma_oop:/var/lib/postgresql/data
+      - swe_deep:/var/lib/postgresql/data
     networks:
-      - node_prisma_oop
+      - swe_deep
 
 networks:
-  node_prisma_oop:
+  swe_deep:
     driver: bridge
-    name: node_prisma_oop
+    name: swe_deep
 
 volumes:
-  node_prisma_oop:
+  swe_deep:
     driver: local
-    name: node_prisma_oop
+    name: swe_deep
